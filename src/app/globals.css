@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette - OKLCH */
+  --color-background: oklch(0% 0 0);
+  --color-foreground: oklch(98.3% 0.004 316.6);
+  --color-card: oklch(0% 0 0);
+  --color-card-foreground: oklch(98.3% 0.004 316.6);
+  --color-popover: oklch(0% 0 0);
+  --color-popover-foreground: oklch(98.3% 0.004 316.6);
+  --color-primary: oklch(70.5% 0.218 252.4);
+  --color-primary-foreground: oklch(98.3% 0.004 316.6);
+  --color-secondary: oklch(27.8% 0.03 316.6);
+  --color-secondary-foreground: oklch(98.3% 0.004 316.6);
+  --color-muted: oklch(27.8% 0.03 316.6);
+  --color-muted-foreground: oklch(64.9% 0.015 316.6);
+  --color-accent: oklch(27.8% 0.03 316.6);
+  --color-accent-foreground: oklch(98.3% 0.004 316.6);
+  --color-destructive: oklch(57.6% 0.242 29.2);
+  --color-destructive-foreground: oklch(98.3% 0.004 316.6);
+  --color-border: oklch(27.8% 0.03 316.6);
+  --color-input: oklch(27.8% 0.03 316.6);
+  --color-ring: oklch(70.5% 0.218 252.4);
+  --radius: 0.5rem;
+}
+
+/* Custom Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.6);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0% 0 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, oklch(70.5% 0.218 252.4), oklch(65% 0.25 280));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, oklch(75% 0.25 252.4), oklch(70% 0.28 280));
+}
+
+/* Neon Glow Effects */
+.neon-cyan {
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.8),
+               0 0 20px rgba(0, 217, 255, 0.6),
+               0 0 30px rgba(0, 217, 255, 0.4);
+}
+
+.neon-purple {
+  text-shadow: 0 0 10px rgba(176, 38, 255, 0.8),
+               0 0 20px rgba(176, 38, 255, 0.6),
+               0 0 30px rgba(176, 38, 255, 0.4);
+}
+
+/* Glass Morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #00D9FF 0%, #B026FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
